@@ -1,44 +1,36 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 30px;
-    background-color: #01613c;
-    text-align: right;
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
-h1 {
-    color: #ffffff;
-    text-align: left;
-}
-p {
-    color: #ffffff;
-}
-label {
-    color: #4bccff;
-}
-input[type="number"] {
-    width: 100px;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #f5f5f5;
-    border-radius: 4px;
-}
+
 button {
-    padding: 20px 40px;
-    background-color: #ffc8c8;
-    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    position: inherit;
-}
-button:hover {
-    background-color: #f3f3f3;
-}
-#canvas {
-    display: block;
-    margin: 0 auto;
-    width: 500px;
-    height: 500px;
-    border: 5px solid #ffffff;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    animation: slideIn 1s ease-in-out;
+}
